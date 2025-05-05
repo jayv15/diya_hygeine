@@ -81,7 +81,7 @@
     "import-newlines/enforce": [
       "error",
       {
-        "items": 20, // Only max-len rule is used
+        "items": 20,
         "max-len": 120,
         "semi": false
       }
