@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { Alfa_Slab_One } from "next/font/google";
 
-const anton = Alfa_Slab_One({ weight: "400" });
+const anton = Alfa_Slab_One({ weight: "400", subsets: ['latin']});
 
 const AboutUs = () => {
   return (

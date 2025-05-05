@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import Splashscreen from "@/components/splashscreen";
 import { motion } from "motion/react";
 
-const anton = Alfa_Slab_One({ weight: "400" });
+const anton = Alfa_Slab_One({ weight: "400", subsets: ['latin'] });
 
 const Home = () => {
   const router = useRouter();
