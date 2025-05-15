@@ -4,7 +4,7 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <div>
-    <div className="bg-orange-100 py-8 flex flex-col lg:flex-row justify-center items-center gap-8">
+    <div className="bg-orange-100 py-8 flex flex-col lg:flex-row justify-center items-center gap-4 text-black">
       <div className="flex justify-center w-full lg:w-1/3">
         <div>
           <Image
@@ -39,14 +39,14 @@ const Footer: React.FC = () => {
         </div>
       </div>
       </div>
-      <div className="bg-slate-50 py-2 flex flex-col lg:flex-row justify-evenly items-center gap-8">
-        <div>
+      <div className="bg-slate-50 text-black py-2 flex flex-col lg:flex-row justify-evenly items-center gap-5">
+        <div className='md: text-sm'>
           © {new Date().getFullYear()}, Diya Hyiegene Flours Pvt. Ltd., All rights reserved
         </div>
-        <div>
-Design and developed by ReD
+        <div className='md: text-sm'>
+Designed and developed by ReD
 <span className="inline-block w-4 h-4 bg-red-600 rounded-full align-middle mb-1"></span>
-t Studio.
+t Solution.
         </div>
       </div>
       </div>

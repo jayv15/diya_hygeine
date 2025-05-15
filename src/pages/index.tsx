@@ -9,6 +9,7 @@ import FillBar from "@/components/fillbar";
 import { useRouter } from "next/router";
 import Splashscreen from "@/components/splashscreen";
 import { motion } from "motion/react";
+import { homeProducts } from "@/utils/constant";
 
 const anton = Alfa_Slab_One({ weight: "400", subsets: ['latin'] });
 
@@ -59,17 +60,17 @@ const Home = () => {
           </h1>
         </main>
       </div>
-      <div className="py-20 px-100">
+      <div className="py-20 px-6 md:px-20 max-w-5xl mx-auto">
         <div>
           <div className="font-bold text-2xl text-orange-500">
             Diya Hygiene Flours Pvt. Ltd.
           </div>
           <motion.div
-              transition={{ duration: 1, ease: "easeOut" }}
-              initial={{ width: 0 }}
-              animate={{ width: 400 }}
-              className="w-20 h-1 bg-[#004aac] mt-1 mb-4"
-            />
+            transition={{ duration: 1, ease: "easeOut" }}
+            initial={{ width: 0 }}
+            animate={{ width: 400 }}
+            className="w-20 h-1 bg-[#004aac] mt-1 mb-4"
+          />
         </div>
         <span>
           Established in 2011, Diya Hygiene Flours has been at the forefront of
@@ -99,31 +100,27 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="py-5 px-20 items-center">
+      <div className="py-5 px-6 md:px-20 items-center">
         <div className="py-20 text-center flex flex-col items-center">
           <div className="font-bold text-2xl text-orange-500">Products</div>
           <FillBar />
         </div>
 
         <div className="flex justify-evenly flex-wrap">
-          {[1, 2, 3].map((_, i) => (
+          {homeProducts.map((product, i) => (
             <div
               key={i}
               className="w-[400px] flex flex-col items-center bg-white shadow-md rounded-xl p-4"
             >
               <Image
-                src="/products/maida.jpeg"
+                src={product.img}
                 alt="maida"
                 height={400}
                 width={400}
                 className="rounded-xl"
               />
               <p className="text-sm text-center mt-4">
-                Diya premium maida is a 100% refined wheat flour, packed in a
-                convenient bag for easy storage. Made for vegetarians, this
-                maida is perfect for making fluffy naans. Store in dry
-                conditions to keep it fresh. Packaging size is 30 kg and 50 kg.
-                Ideal for all your cooking and baking needs.
+                {product.desc}
               </p>
             </div>
           ))}
