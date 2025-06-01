@@ -33,7 +33,7 @@ export const products = [
     name: 'Bran',
     desc: 'Diya Premium Bran is a nutritious byproduct of wheat milling, rich in dietary fiber and essential nutrients. Commonly used to enhance the fiber content in bakery items, cereals, and health foods, this 100% vegetarian bran supports digestive health and wellness. Available in 30 kg and 50 kg packs, it should be stored in cool, dry conditions.',
     id: 'DH-BRN',
-    img: '/products/super_atta.jpeg'
+    img: '/products/bran.jpg'
   },
 ]
 

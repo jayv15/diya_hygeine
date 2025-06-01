@@ -41,7 +41,7 @@ const Home = () => {
   return (
     <div className="bg-slate-50 text-black flex flex-col min-h-screen">
       <Header />
-      <div className="w-full h-[450px] relative overflow-hidden">
+      <div className="w-full h-[300px] md:h-[450px] relative overflow-hidden">
         <Image
           alt="DiyaMill"
           src="/diya_gate.jpeg"
@@ -54,7 +54,7 @@ const Home = () => {
         {/* Centered text over image */}
         <main className="absolute inset-0 flex items-center justify-center">
           <h1
-            className={`${anton.className} text-5xl text-[#004aac] text-center`}
+            className={`${anton.className} text-3xl md:text-5xl text-[#004aac] text-center`}
           >
             Welcome to Diya Hygiene
           </h1>

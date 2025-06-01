@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { ShoppingCart, Info } from "lucide-react";
+import { ShoppingCart, Info, X } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { products } from "@/utils/constant";
@@ -8,6 +8,7 @@ import Link from "next/link";
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
+  const [modalImage, setModalImage] = useState<string | null>(null);
 
   // Toggle product details
   const toggleProductDetails = (productId: string) => {
@@ -16,6 +17,16 @@ const Products = () => {
     } else {
       setSelectedProduct(productId);
     }
+  };
+
+  // Open image modal
+  const openImageModal = (img: string) => {
+    setModalImage(img);
+  };
+
+  // Close image modal
+  const closeImageModal = () => {
+    setModalImage(null);
   };
 
   return (
@@ -42,7 +53,7 @@ const Products = () => {
                 className="bg-white rounded-lg shadow-md border border-orange-100 overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 {/* Product Image */}
-                <div className="overflow-hidden">
+                <div className="overflow-hidden cursor-pointer" onClick={() => openImageModal(product.img)}>
                   <img 
                     src={product.img} 
                     alt={product.name}
@@ -88,6 +99,22 @@ const Products = () => {
           </div>
         </div>
         
+        {/* Image Modal */}
+        {modalImage && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/38" onClick={closeImageModal}>
+            <div className="relative max-w-xl w-full mx-4" onClick={e => e.stopPropagation()}>
+              <button
+                className="absolute top-2 right-2 bg-white rounded-full p-1 shadow hover:bg-orange-100"
+                onClick={closeImageModal}
+                aria-label="Close"
+              >
+                <X className="w-6 h-6 text-orange-600" />
+              </button>
+              <img src={modalImage} alt="Product" className="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+          </div>
+        )}
+
         {/* Packaging Info Section */}
         <div className="bg-orange-50 py-16">
           <div className="container mx-auto px-4">
