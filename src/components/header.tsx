@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#004aac] text-white sticky top-0 z-50">
+    <header className="bg-[#004aac] text-white sticky w-full top-0 z-50">
       <div className="flex items-center justify-between p-0 max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden pr-2">
           <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <nav className="md:hidden bg-[#004aac] px-4 pb-4 flex flex-col space-y-2 font-bold text-lg">
+        <nav className="md:hidden bg-[#004aac] px-4 pb-4 flex flex-col space-y-2 font-bold text-lg text-end">
           <Link href="/" className="hover:text-orange-400">Home</Link>
           <Link href="/products" className="hover:text-orange-400">Products</Link>
           <Link href="/about-us" className="hover:text-orange-400">About</Link>

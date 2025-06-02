@@ -4,7 +4,7 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <div>
-    <div className="bg-orange-100 py-8 flex flex-col lg:flex-row justify-center items-center gap-4 text-black">
+    <div className="bg-orange-100 py-8 flex flex-row justify-center items-center gap-4 text-black px-2">
       <div className="flex justify-center w-full lg:w-1/3">
         <div>
           <Image
