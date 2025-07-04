@@ -151,7 +151,7 @@ const Products = () => {
           </div>
           
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-orange-500 to-orange-600 py-16 text-white">
+          <div className="bg-gradient-to-r from-orange-400 to-orange-500 py-16 text-white">
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-3xl font-bold mb-6">Ready to Order?</h2>
               <p className="text-lg mb-8 max-w-2xl mx-auto">

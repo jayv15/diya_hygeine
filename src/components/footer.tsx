@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
         </div>
         <div className='md: text-sm'>
 Designed and developed by ReD
-<span className="inline-block w-4 h-4 bg-red-600 rounded-full align-middle mb-1"></span>
+<span className="inline-block w-3 h-3 bg-red-600 rounded-full align-middle mb-1"></span>
 t Solution.
         </div>
       </div>
